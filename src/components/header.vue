@@ -13,11 +13,22 @@
       <a href="tel:15705113851" target="_blank"><i class="iconfont" title="tel">&#xe642;</i></a>
       <a href="https://github.com/tonyzhou1890" target="_blank"><i class="iconfont">&#xeaf6;</i></a>
       <a href="https://codepen.io/tonyzhou1890" target="_blank"><i class="iconfont">&#xe9eb;</i></a>
-      <a href="../assets/doc/resume.pdf" target="_blank"><i class="iconfont">&#xe814;</i></a>
+      <a :href="pdf" target="_blank"><i class="iconfont">&#xe814;</i></a>
       
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return {
+      pdf: require('../assets/doc/resume.pdf')
+    }
+  }
+}
+</script>
+
 
 <style lang="less" scoped>
 @bgc: rgb(10,37,55);
