@@ -2,7 +2,7 @@
   <div class="body">
     <section class="skill">
       <div class="title">
-        <h2><i class="iconfont">&#xe6db;</i>skill</h2>
+        <h2><i class="iconfont">&#xe6db;</i>Skill</h2>
         <div class="filter-list">
           <label 
             class="filter"
@@ -56,13 +56,13 @@
     </section>
     <section class="experence">
       <div class="title">
-        <h2><i class="iconfont">&#xe6ac;</i>experence</h2>
+        <h2><i class="iconfont">&#xe6ac;</i>Experence</h2>
         <div class="filter-list">
           <label 
             class="filter"
             :class="{'no-active':!experence.work}"
           ><i class="iconfont">&#xe60a;</i>
-            work
+            Work
             <input 
               type="checkbox"
               v-model="experence.work"
@@ -72,7 +72,7 @@
             class="filter"
             :class="{'no-active':!experence.study}"
           ><i class="iconfont">&#xe60a;</i>
-            study
+            Study
             <input 
               type="checkbox"
               v-model="experence.study"
@@ -114,13 +114,13 @@
     </section>
     <section class="work">
       <div class="title">
-        <h2><i class="iconfont">&#xe99a;</i>portfolio</h2>
+        <h2><i class="iconfont">&#xe99a;</i>Portfolio</h2>
         <div class="filter-list">
           <label 
             class="filter"
             :class="{'no-active':!work.codepen}"
           ><i class="iconfont">&#xe60a;</i>
-            codepen
+            Codepen
             <input 
               type="checkbox"
               v-model="work.codepen"
@@ -130,7 +130,7 @@
             class="filter"
             :class="{'no-active':!work.github}"
           ><i class="iconfont">&#xe60a;</i>
-            github
+            Github
             <input 
               type="checkbox"
               v-model="work.github"
@@ -456,6 +456,7 @@ export default {
         position: relative;
         img {
           width: 100%;
+          height: 100%;
           vertical-align: middle;
         }
         div {

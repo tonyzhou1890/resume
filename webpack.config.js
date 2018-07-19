@@ -56,6 +56,11 @@ const config = {
             name: 'doc/[name].[ext]'
           }
         }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/'
       }
 
     ]
