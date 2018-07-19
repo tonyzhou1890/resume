@@ -43,7 +43,7 @@ export default {
   background-size: cover;
   text-align: center;
   color: @color;
-  font-family: LiSu KaiTi;
+  font-family: LiSu, KaiTi;
   .info {
     width: 80%;
     margin: auto;
