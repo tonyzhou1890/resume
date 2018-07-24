@@ -274,7 +274,7 @@ export default {
           pic: require('../assets/image/calculator.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/YLByzW',
+          href: 'https://codepen.io/tonyzhou1890/pen/YLByzW',
           bgc: 'purple',
           title: 'calculator'
         },
@@ -282,7 +282,7 @@ export default {
           pic: require('../assets/image/pomodoro clock.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/WJPyer',
+          href: 'https://codepen.io/tonyzhou1890/pen/WJPyer',
           bgc: 'green',
           title: 'pomodoro clock'
         },
@@ -290,7 +290,7 @@ export default {
           pic: require('../assets/image/simon game.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/ELJEZO',
+          href: 'https://codepen.io/tonyzhou1890/pen/ELJEZO',
           bgc: 'darkgreen',
           title: 'simon game'
         },
@@ -298,7 +298,7 @@ export default {
           pic: require('../assets/image/twitchtv JSON API.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/xjNgeo',
+          href: 'https://codepen.io/tonyzhou1890/pen/xjNgeo',
           bgc: 'gray',
           title: 'twitch.tv JSON API'
         },
