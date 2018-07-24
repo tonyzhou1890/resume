@@ -512,4 +512,30 @@ export default {
     margin-top: 1.5rem;
   }
 }
+
+@media screen and (max-width: 520px) {
+  .body {
+    .title {
+      height: auto;
+      line-height: normal;
+      > h2 {
+        display: block;
+      }
+      .filter-list {
+        float: initial;
+        .filter {
+          display: inline-block;
+          margin: 5px 5px 5px 0;
+        }
+      }
+    }
+    .work {
+      .work-list {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 </style>

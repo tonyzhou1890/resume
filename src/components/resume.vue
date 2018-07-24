@@ -1,5 +1,8 @@
 <template>
-  <div class="resume">
+  <div 
+    class="resume ova"
+    @click="start_pop($event)"
+  >
     <header>
       <vueheader></vueheader>
     </header>
@@ -14,12 +17,85 @@
 import vueheader from "./header.vue";
 import vuebody from "./body.vue";
 export default {
+  data(){
+    return {
+      pop: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Vue',
+        'jQuery',
+        'Less',
+        'webpack',
+        'gimp',
+        'github'
+      ],
+      pop_color: [
+        'purple',
+        'orange',
+        'blue',
+        'red',
+        'gray'
+      ]
+    }
+  },
   components: {
     vueheader,
     vuebody
+  },
+  methods: {
+    start_pop(e){
+      if(!window.FileReader){
+        return;
+      }
+      e = e || event;
+      if('INPUT' === e.target.tagName){
+        return;
+      }
+      let resume = e.currentTarget;
+      let el = document.createElement('p');
+      let text = this.pop[Math.floor(Math.random() * this.pop.length)];
+      let color = this.pop_color[Math.floor(Math.random() * this.pop_color.length)];
+      el.setAttribute('text',text);
+      el.style.top = e.pageY + 'px';
+      el.style.left = e.pageX + 'px';
+      el.style.color = color;
+      el.className = 'pop';
+      resume.appendChild(el);
+      setTimeout(() => {
+        el.className = 'pop hidden';
+        setTimeout(() => {
+          resume.removeChild(el);
+        },3010);
+      }, 10);
+    }
   }
 }
 </script>
+
+<style lang="less">
+.resume {
+  position: relative;
+  overflow-x: hidden;
+  .pop {
+    position: absolute;
+    &::after {
+      position: absolute;
+      content: attr(text);
+      left: 0;
+      top: -40px;
+      font-size: 16px;
+      margin-top: 0;
+      opacity: 1;
+    }
+    &.hidden::after {
+      opacity: 0;
+      margin-top: -50px;
+      transition: all 3s;
+    }
+  }
+}
+</style>
 
 
 <style lang="less" scoped>
@@ -41,6 +117,7 @@ export default {
     float: right;
     background-color: @bgc;
   }
+  
 }
 
 @media screen and (max-width: 900px) {
