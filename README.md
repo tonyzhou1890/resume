@@ -1,4 +1,21 @@
-# resume
-前端简历（front-end resume）
+# simple-vue-template
 
-简历地址： [坚.top/apps/resume](http://坚.top/apps/resume)
+> a simple template of vue
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

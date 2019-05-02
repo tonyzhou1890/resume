@@ -4,7 +4,7 @@
       <div class="title">
         <h2><i class="iconfont">&#xe6db;</i>Skill</h2>
         <div class="filter-list">
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!skill.lang}"
           >
@@ -15,7 +15,7 @@
               v-model="skill.lang"
             >
           </label>
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!skill.lib}"
           >
@@ -26,7 +26,7 @@
               v-model="skill.lib"
             >
           </label>
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!skill.tool}"
           >
@@ -39,7 +39,7 @@
           </label>
         </div>
       </div>
-      
+
       <transition-group
         name="skill-list"
         tag="ul"
@@ -47,7 +47,7 @@
       >
         <li
           v-for="(item,index) in skill_list"
-          :key="index"
+          :key="index + 1"
           v-show="item.filter"
         >
           <i class="iconfont" v-html="item.icon">&#xe726;</i><span v-text="item.text">HTML</span>
@@ -58,22 +58,22 @@
       <div class="title">
         <h2><i class="iconfont">&#xe6ac;</i>Experence</h2>
         <div class="filter-list">
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!experence.work}"
           ><i class="iconfont">&#xe60a;</i>
             Work
-            <input 
+            <input
               type="checkbox"
               v-model="experence.work"
             >
           </label>
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!experence.study}"
           ><i class="iconfont">&#xe60a;</i>
             Study
-            <input 
+            <input
               type="checkbox"
               v-model="experence.study"
             >
@@ -87,25 +87,25 @@
       >
         <li
           v-for="(item,index) in experence_list"
-          :key="index"
+          :key="index + 1"
           v-show="item.filter"
         >
           <header>
-            <h3 
+            <h3
               class="ex-title"
               v-text="item.title"
             ></h3>
-            <p 
+            <p
               class="ex-time"
               v-text="item.time"
             ></p>
           </header>
           <hr>
-          <p 
+          <p
             class="ex-location"
             v-text="item.location"
           ></p>
-          <p 
+          <p
             class="ex-ex"
             v-html="item.ex"
           ></p>
@@ -116,12 +116,12 @@
       <div class="title">
         <h2><i class="iconfont">&#xe99a;</i>Portfolio</h2>
         <div class="filter-list">
-          <label 
+          <label
             class="filter"
             :class="{'no-active':!work.codepen}"
           ><i class="iconfont">&#xe60a;</i>
             Codepen
-            <input 
+            <input
               type="checkbox"
               v-model="work.codepen"
             >
@@ -131,7 +131,7 @@
             :class="{'no-active':!work.github}"
           ><i class="iconfont">&#xe60a;</i>
             Github
-            <input 
+            <input
               type="checkbox"
               v-model="work.github"
             >
@@ -145,14 +145,14 @@
       >
         <li
           v-for="(item,index) in work_list"
-          :key="index"
+          :key="index + 1"
           v-show="item.filter"
         >
-          <a 
+          <a
             :href="item.href"
             target="_blank"
           >
-            <img 
+            <img
               :src="item.pic"
             >
             <div
@@ -165,7 +165,7 @@
                 v-text="item.title"
               ></p>
             </div>
-            
+
           </a>
         </li>
       </transition-group>
@@ -176,7 +176,7 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       skill: {
         lang: true,
@@ -194,7 +194,7 @@ export default {
     }
   },
   computed: {
-    skill_list: function(){
+    skill_list: function() {
       return [
         {
           icon: '&#xe726;',
@@ -243,7 +243,7 @@ export default {
         }
       ]
     },
-    experence_list: function(){
+    experence_list: function() {
       return [
         {
           title: '学生',
@@ -268,10 +268,10 @@ export default {
         }
       ]
     },
-    work_list: function(){
+    work_list: function() {
       return [
         {
-          pic: require('../assets/image/calculator.JPG'),
+          pic: require('@/assets/image/calculator.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
           href: 'https://codepen.io/tonyzhou1890/full/YLByzW',
@@ -279,7 +279,7 @@ export default {
           title: 'calculator'
         },
         {
-          pic: require('../assets/image/pomodoro clock.JPG'),
+          pic: require('@/assets/image/pomodoro clock.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
           href: 'https://codepen.io/tonyzhou1890/full/WJPyer',
@@ -287,7 +287,7 @@ export default {
           title: 'pomodoro clock'
         },
         {
-          pic: require('../assets/image/simon game.JPG'),
+          pic: require('@/assets/image/simon game.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
           href: 'https://codepen.io/tonyzhou1890/full/ELJEZO',
@@ -295,7 +295,7 @@ export default {
           title: 'simon game'
         },
         {
-          pic: require('../assets/image/twitchtv JSON API.JPG'),
+          pic: require('@/assets/image/twitchtv JSON API.JPG'),
           location: 'codepen',
           filter: this.work.codepen,
           href: 'https://codepen.io/tonyzhou1890/full/xjNgeo',
@@ -303,7 +303,7 @@ export default {
           title: 'twitch.tv JSON API'
         },
         {
-          pic: require('../assets/image/诗词.jpg'),
+          pic: require('@/assets/image/诗词.jpg'),
           location: 'codepen',
           filter: this.work.github,
           href: 'https://github.com/tonyzhou1890/poem',
@@ -311,7 +311,7 @@ export default {
           title: '诗词'
         },
         {
-          pic: require('../assets/image/爱家.jpg'),
+          pic: require('@/assets/image/爱家.jpg'),
           location: 'codepen',
           filter: this.work.github,
           href: 'https://github.com/tonyzhou1890/love-home',
@@ -324,13 +324,12 @@ export default {
 }
 </script>
 
-
-<style lang="less" scoped>
-@bgc: seashell;
-@blue: rgb(84, 110, 226);
-@lightBlue: rgb(119, 139, 233);
-@lightGray: lightgray;
-@white: white;
+<style lang="scss" scoped>
+$bgc: seashell;
+$blue: rgb(84, 110, 226);
+$lightBlue: rgb(119, 139, 233);
+$lightGray: lightgray;
+$white: white;
 .body {
   width: 100%;
   min-height: 100%;
@@ -345,7 +344,7 @@ export default {
   h2 {
     font-size: 1.6rem;
     line-height: 2rem;
-    color: @lightBlue;
+    color: $lightBlue;
     width: auto;
     display: inline-block;
     i {
@@ -356,29 +355,29 @@ export default {
   .filter-list {
     float: right;
     .filter {
-      background-color: @lightBlue;
+      background-color: $lightBlue;
       padding: 5px;
       cursor: pointer;
       margin-right: 5px;
-      color: @white;
+      color: $white;
       transition: all .3s;
       position: relative;
       user-select: none;
       i {
         font-size: 1rem;
-        color: @lightBlue;
-        background-color: @white;
+        color: $lightBlue;
+        background-color: $white;
       }
       &:hover {
-        background-color: @blue;
+        background-color: $blue;
       }
       > input[type='checkbox'] {
         display: none;
       }
       &.no-active {
-        background-color: @lightGray;
+        background-color: $lightGray;
         i {
-          color: @white;
+          color: $white;
         }
       }
     }
@@ -413,7 +412,7 @@ export default {
   .experence {
     .experence-list {
       overflow: hidden;
-      
+
       .ex-title {
         display: inline-block;
         margin: 16px 0 0 0;
@@ -432,7 +431,7 @@ export default {
         margin: 0 0 16px 0;
         font-size: 1rem;
         font-weight: bold;
-        color: @lightBlue;
+        color: $lightBlue;
       }
       .experence-list-leave-to, .experence-list-enter {
         opacity: 0;
@@ -468,7 +467,7 @@ export default {
           text-align: center;
           padding: 0;
           margin: 0;
-          color: @white;
+          color: $white;
           font-size: 20px;
           font-weight: bold;
           transition: opacity .5s;
@@ -508,7 +507,7 @@ export default {
   .copyright {
     text-align: center;
     font-size: 1.6rem;
-    color: @lightBlue;
+    color: $lightBlue;
     margin-top: 1.5rem;
   }
 }

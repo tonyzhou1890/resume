@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="resume ova"
     @click="start_pop($event)"
   >
@@ -12,12 +12,11 @@
   </div>
 </template>
 
-
 <script>
-import vueheader from "./components/header.vue";
-import vuebody from "./components/body.vue";
+import vueheader from './components/header.vue'
+import vuebody from './components/body.vue'
 export default {
-  data(){
+  data() {
     return {
       pop: [
         'HTML',
@@ -44,36 +43,36 @@ export default {
     vuebody
   },
   methods: {
-    start_pop(e){
-      if(!window.FileReader){
-        return;
+    start_pop(e) {
+      if (!window.FileReader) {
+        return
       }
-      e = e || event;
-      if('INPUT' === e.target.tagName){
-        return;
+      e = e || event
+      if (e.target.tagName === 'INPUT') {
+        return
       }
-      let resume = e.currentTarget;
-      let el = document.createElement('p');
-      let text = this.pop[Math.floor(Math.random() * this.pop.length)];
-      let color = this.pop_color[Math.floor(Math.random() * this.pop_color.length)];
-      el.setAttribute('text',text);
-      el.style.top = e.pageY + 'px';
-      el.style.left = e.pageX + 'px';
-      el.style.color = color;
-      el.className = 'pop';
-      resume.appendChild(el);
+      let resume = e.currentTarget
+      let el = document.createElement('p')
+      let text = this.pop[Math.floor(Math.random() * this.pop.length)]
+      let color = this.pop_color[Math.floor(Math.random() * this.pop_color.length)]
+      el.setAttribute('text', text)
+      el.style.top = e.pageY + 'px'
+      el.style.left = e.pageX + 'px'
+      el.style.color = color
+      el.className = 'pop'
+      resume.appendChild(el)
       setTimeout(() => {
-        el.className = 'pop hidden';
+        el.className = 'pop hidden'
         setTimeout(() => {
-          resume.removeChild(el);
-        },3010);
-      }, 10);
+          resume.removeChild(el)
+        }, 3010)
+      }, 10)
     }
   }
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .resume {
   position: relative;
   overflow-x: hidden;
@@ -97,13 +96,12 @@ export default {
 }
 </style>
 
-
-<style lang="less" scoped>
-@bgc: seashell;
+<style lang="scss" scoped>
+$bgc: seashell;
 .resume {
   width: 100%;
   min-height: 100%;
-  background-color: @bgc;
+  background-color: $bgc;
   > header {
     width: 25%;
     height: 100%;
@@ -115,9 +113,9 @@ export default {
     width: 75%;
     min-height: 100%;
     float: right;
-    background-color: @bgc;
+    background-color: $bgc;
   }
-  
+
 }
 
 @media screen and (max-width: 900px) {

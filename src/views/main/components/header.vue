@@ -1,7 +1,7 @@
 <template>
   <div class="sider">
     <div class="info">
-      <img src="../assets/image/pic2.jpg" alt="">
+      <img :src="photo" alt="">
       <p class="motto">"种树最好的时机是十年前，其次是现在。"</p>
       <hr>
       <p class="name">周喜涛</p>
@@ -14,35 +14,35 @@
       <a href="https://github.com/tonyzhou1890" target="_blank"><i class="iconfont" title="github">&#xeaf6;</i></a>
       <a href="https://codepen.io/tonyzhou1890" target="_blank"><i class="iconfont" title="codepen">&#xe9eb;</i></a>
       <a :href="pdf" target="_blank"><i class="iconfont" title="pdf">&#xe814;</i></a>
-      
+
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      pdf: require('../assets/doc/resume.pdf')
+      pdf: require('@/assets/doc/resume.pdf'),
+      photo: require('@/assets/image/pic2.jpg')
     }
   }
 }
 </script>
 
-
-<style lang="less" scoped>
-@bgc: rgb(10,37,55);
-@color: white;
-@color2: rgb(47,115,133);
-@shadow: gray;
+<style lang="scss" scoped>
+$bgc: rgb(10,37,55);
+$color: white;
+$color2: rgb(47,115,133);
+$shadow: gray;
 .sider {
   width: 100%;
   height: 100%;
-  background-color: @bgc;
-  background: url('../assets/image/sidebar.jpg') center top;
+  background-color: $bgc;
+  background: url('~@/assets/image/sidebar.jpg') center top;
   background-size: cover;
   text-align: center;
-  color: @color;
+  color: $color;
   font-family: LiSu, KaiTi;
   .info {
     width: 80%;
@@ -52,7 +52,7 @@ export default {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      box-shadow: 0 0 5px 2px @shadow
+      box-shadow: 0 0 5px 2px $shadow
     }
     .motto {
       font-size: 1.1rem;
@@ -70,6 +70,7 @@ export default {
       font-size: 1.7rem;
       cursor: pointer;
       transition: transform .3s;
+      color: white;
       &:hover {
         transform: scale(1.6);
       }
