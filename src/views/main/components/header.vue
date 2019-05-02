@@ -9,7 +9,7 @@
       <p class="edu">盐城师范学院物理系</p>
     </div>
     <div class="contact">
-      <a href="mailto:1332988826@qq.com" target="_blank"><i class="iconfont" title="email">&#xe6da;</i></a>
+      <a href="mailto:1332988826@qq.com" target="_blank"><svg-icon icon-class="email" class="svg" /></a>
       <a href="tel:15705113851" target="_blank"><i class="iconfont" title="tel">&#xe642;</i></a>
       <a href="https://github.com/tonyzhou1890" target="_blank"><i class="iconfont" title="github">&#xeaf6;</i></a>
       <a href="https://codepen.io/tonyzhou1890" target="_blank"><i class="iconfont" title="codepen">&#xe9eb;</i></a>
@@ -62,7 +62,7 @@ export default {
     }
   }
   .contact {
-    i {
+    i, .svg {
       display: inline-block;
       width: 1.9rem;
       height: 1.9rem;

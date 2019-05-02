@@ -36,12 +36,19 @@ const config = {
         loader: 'vue-loader'
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: [path.resolve(__dirname,'src/icons')],
+        options: {
+          symbolId: 'icon-[name]'
+        }
+      },
+      {
         test: /\.(jpg|jpeg|JPG|png|PNG|gif|GIF|woff|svg|ttf|eot)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'images/[name].[ext]'
-          }
+        loader: 'file-loader',
+        exclude: [path.resolve(__dirname,'src/icons')],
+        options: {
+          name: 'images/[name].[ext]'
         }
       },
       {
@@ -78,7 +85,7 @@ if(isDev){
   config.devtool = '#cheap-module-eval-source-map';
   config.devServer = {
     port: 8000,
-    host: '0.0.0.0',
+    host: 'localhost',
     overlay: {
       errors: true
     },

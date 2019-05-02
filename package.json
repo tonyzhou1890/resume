@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "b_dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "b_pro": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.4"
@@ -29,8 +30,11 @@
     "less": "^3.7.1",
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",
+    "svg-sprite-loader": "^4.1.3",
+    "svgo": "^1.1.1",
     "vue": "^2.5.16",
     "vue-loader": "^15.2.4",
+    "vue-router": "^3.0.6",
     "vue-template-compiler": "^2.5.16"
   }
 }
