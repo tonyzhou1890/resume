@@ -10,6 +10,9 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import '@/styles/index.scss' // global css
 import './icons' // icon
 
+import bubble from 'tiny-utils.js/directives/bubble'
+Vue.directive('tuBubble', bubble)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

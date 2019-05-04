@@ -1,7 +1,7 @@
 <template>
   <div
     class="resume ova"
-    @click="start_pop($event)"
+    v-tu-bubble="bubble"
   >
     <header>
       <vueheader></vueheader>
@@ -18,56 +18,38 @@ import vuebody from './components/body.vue'
 export default {
   data() {
     return {
-      pop: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Vue',
-        'jQuery',
-        'Less',
-        'webpack',
-        'gimp',
-        'github'
-      ],
-      pop_color: [
-        'purple',
-        'orange',
-        'blue',
-        'red',
-        'gray'
-      ]
+      bubble: {
+        text: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'Vue',
+          'element-ui',
+          'ECharts',
+          'React.js',
+          'jQuery',
+          'Less',
+          'Scss',
+          'webpack',
+          'gimp',
+          'git'
+        ],
+        color: [
+          'purple',
+          'orange',
+          'blue',
+          'red',
+          'gray',
+          'green',
+          'darkgreen',
+          'brown'
+        ]
+      }
     }
   },
   components: {
     vueheader,
     vuebody
-  },
-  methods: {
-    start_pop(e) {
-      if (!window.FileReader) {
-        return
-      }
-      e = e || event
-      if (e.target.tagName === 'INPUT') {
-        return
-      }
-      let resume = e.currentTarget
-      let el = document.createElement('p')
-      let text = this.pop[Math.floor(Math.random() * this.pop.length)]
-      let color = this.pop_color[Math.floor(Math.random() * this.pop_color.length)]
-      el.setAttribute('text', text)
-      el.style.top = e.pageY + 'px'
-      el.style.left = e.pageX + 'px'
-      el.style.color = color
-      el.className = 'pop'
-      resume.appendChild(el)
-      setTimeout(() => {
-        el.className = 'pop hidden'
-        setTimeout(() => {
-          resume.removeChild(el)
-        }, 3010)
-      }, 10)
-    }
   }
 }
 </script>

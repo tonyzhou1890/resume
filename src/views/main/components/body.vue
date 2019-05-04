@@ -170,7 +170,7 @@
         </li>
       </transition-group>
     </section>
-    <p class="copyright">© 2018 Tony</p>
+    <p class="copyright">© 2019 Tony</p>
   </div>
 </template>
 
@@ -222,13 +222,13 @@ export default {
           filter: this.skill.lib
         },
         {
-          icon: 'vuejs',
+          icon: 'element-ui',
           text: 'element-ui',
           filter: this.skill.lib
         },
         {
-          icon: '',
-          text: 'echarts',
+          icon: 'ECharts',
+          text: 'ECharts',
           filter: this.skill.lib
         },
         {
@@ -242,7 +242,7 @@ export default {
           filter: this.skill.tool
         },
         {
-          icon: 'less',
+          icon: 'scss',
           text: 'Scss',
           filter: this.skill.tool
         },
@@ -269,21 +269,21 @@ export default {
           title: '学生',
           time: '2012-2016',
           location: '盐城师范学院',
-          ex: '就读于盐城师范学院物理系。',
+          ex: '就读于盐城师范学院物理系。其间自学html、css、JavaScript。',
           filter: this.experence.study
         },
         {
-          title: '网站编辑',
-          time: '2016.11-2018.2',
+          title: '前端工程师',
+          time: '2016.11-2018.7',
           location: '苏州志高装潢设计工程有限公司',
-          ex: '1.负责网站及微信公众号文章的撰写和更新。<br />2.公司网站页面设计、开发及维护。',
+          ex: '公司网站页面设计、开发及维护。',
           filter: this.experence.work
         },
         {
-          title: '自学web前端',
-          time: '2018.3-至今',
-          location: '苏州',
-          ex: '学习web前端相关知识。',
+          title: '前端工程师',
+          time: '2018.8-2019.4',
+          location: '小为智能科技有限公司',
+          ex: '1. 官网的开发。<br />2. 数据展示平台的开发。<br />3. 后台管理系统的开发。',
           filter: this.experence.study
         }
       ]
