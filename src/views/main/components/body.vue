@@ -2,13 +2,13 @@
   <div class="body">
     <section class="skill">
       <div class="title">
-        <h2><i class="iconfont">&#xe6db;</i>Skill</h2>
+        <h2><svg-icon icon-class="skill" class="svg" />Skill</h2>
         <div class="filter-list">
           <label
             class="filter"
             :class="{'no-active':!skill.lang}"
           >
-            <i class="iconfont">&#xe60a;</i>
+            <svg-icon icon-class="hook" class="svg" />
             Language
             <input
               type="checkbox"
@@ -19,7 +19,7 @@
             class="filter"
             :class="{'no-active':!skill.lib}"
           >
-            <i class="iconfont">&#xe60a;</i>
+            <svg-icon icon-class="hook" class="svg" />
             Library&Framework
             <input
               type="checkbox"
@@ -30,7 +30,7 @@
             class="filter"
             :class="{'no-active':!skill.tool}"
           >
-            <i class="iconfont">&#xe60a;</i>
+            <svg-icon icon-class="hook" class="svg" />
             Tool
             <input
               type="checkbox"
@@ -50,18 +50,18 @@
           :key="index + 1"
           v-show="item.filter"
         >
-          <i class="iconfont" v-html="item.icon">&#xe726;</i><span v-text="item.text">HTML</span>
+          <svg-icon :icon-class="item.icon" class="svg" /><span v-text="item.text" />
         </li>
       </transition-group>
     </section>
     <section class="experence">
       <div class="title">
-        <h2><i class="iconfont">&#xe6ac;</i>Experence</h2>
+        <h2><svg-icon icon-class="experence" class="svg" />Experence</h2>
         <div class="filter-list">
           <label
             class="filter"
             :class="{'no-active':!experence.work}"
-          ><i class="iconfont">&#xe60a;</i>
+          ><svg-icon icon-class="hook" class="svg" />
             Work
             <input
               type="checkbox"
@@ -71,7 +71,7 @@
           <label
             class="filter"
             :class="{'no-active':!experence.study}"
-          ><i class="iconfont">&#xe60a;</i>
+          ><svg-icon icon-class="hook" class="svg" />
             Study
             <input
               type="checkbox"
@@ -114,12 +114,12 @@
     </section>
     <section class="work">
       <div class="title">
-        <h2><i class="iconfont">&#xe99a;</i>Portfolio</h2>
+        <h2><svg-icon icon-class="portfolio" class="svg" />Portfolio</h2>
         <div class="filter-list">
           <label
             class="filter"
             :class="{'no-active':!work.codepen}"
-          ><i class="iconfont">&#xe60a;</i>
+          ><svg-icon icon-class="hook" class="svg" />
             Codepen
             <input
               type="checkbox"
@@ -129,7 +129,7 @@
           <label
             class="filter"
             :class="{'no-active':!work.github}"
-          ><i class="iconfont">&#xe60a;</i>
+          ><svg-icon icon-class="hook" class="svg" />
             Github
             <input
               type="checkbox"
@@ -197,47 +197,67 @@ export default {
     skill_list: function() {
       return [
         {
-          icon: '&#xe726;',
+          icon: 'html5',
           text: 'HTML',
           filter: this.skill.lang
         },
         {
-          icon: '&#xe653;',
+          icon: 'css3',
           text: 'CSS',
           filter: this.skill.lang
         },
         {
-          icon: '&#xe636;',
+          icon: 'javascript',
           text: 'JavaScript',
           filter: this.skill.lang
         },
         {
-          icon: '&#xe655;',
+          icon: 'jquery',
           text: 'jQuery',
           filter: this.skill.lib
         },
         {
-          icon: '&#xe640;',
+          icon: 'vuejs',
           text: 'Vue',
           filter: this.skill.lib
         },
         {
-          icon: '&#xe602;',
+          icon: 'vuejs',
+          text: 'element-ui',
+          filter: this.skill.lib
+        },
+        {
+          icon: '',
+          text: 'echarts',
+          filter: this.skill.lib
+        },
+        {
+          icon: 'react',
+          text: 'React.js',
+          filter: this.skill.lib
+        },
+        {
+          icon: 'less',
           text: 'Less',
           filter: this.skill.tool
         },
         {
-          icon: '&#xe65b;',
+          icon: 'less',
+          text: 'Scss',
+          filter: this.skill.tool
+        },
+        {
+          icon: 'webpack',
           text: 'webpack',
           filter: this.skill.tool
         },
         {
-          icon: '&#xeaf6;',
-          text: 'github',
+          icon: 'github',
+          text: 'git',
           filter: this.skill.tool
         },
         {
-          icon: '&#xe603;',
+          icon: 'gimp',
           text: 'gimp',
           filter: this.skill.tool
         }
@@ -347,9 +367,9 @@ $white: white;
     color: $lightBlue;
     width: auto;
     display: inline-block;
-    i {
+    i, svg {
       font-size: 1.6rem;
-      padding-right: 20px;
+      margin-right: 20px;
     }
   }
   .filter-list {
@@ -363,7 +383,7 @@ $white: white;
       transition: all .3s;
       position: relative;
       user-select: none;
-      i {
+      i, .svg {
         font-size: 1rem;
         color: $lightBlue;
         background-color: $white;
@@ -376,7 +396,7 @@ $white: white;
       }
       &.no-active {
         background-color: $lightGray;
-        i {
+        i, .svg {
           color: $white;
         }
       }
@@ -391,9 +411,9 @@ $white: white;
         font-size: 1.25rem;
         height: 2.5rem;
         padding: 12px 0 0 0;
-        i {
+        i, .svg {
           font-size: 1.25rem;
-          padding-right: 0.5rem;
+          margin-right: 0.5rem;
         }
       }
       .skill-list-leave-to, .skill-list-enter {
