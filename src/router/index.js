@@ -9,6 +9,15 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: () => import('@/views/main')
+    },
+    {
+      path: '/portfolio/:project',
+      name: 'Portfolio',
+      component: () => import('@/views/portfolio')
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

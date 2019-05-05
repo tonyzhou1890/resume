@@ -118,22 +118,22 @@
         <div class="filter-list">
           <label
             class="filter"
-            :class="{'no-active':!work.codepen}"
+            :class="{'no-active':!work.company}"
           ><svg-icon icon-class="hook" class="svg" />
-            Codepen
+            Company
             <input
               type="checkbox"
-              v-model="work.codepen"
+              v-model="work.company"
             >
           </label>
           <label
             class="filter"
-            :class="{'no-active':!work.github}"
+            :class="{'no-active':!work.self}"
           ><svg-icon icon-class="hook" class="svg" />
-            Github
+            Self
             <input
               type="checkbox"
-              v-model="work.github"
+              v-model="work.self"
             >
           </label>
         </div>
@@ -148,25 +148,18 @@
           :key="index + 1"
           v-show="item.filter"
         >
-          <a
-            :href="item.href"
-            target="_blank"
+          <router-link
+            :to="item.path"
           >
             <img
               :src="item.pic"
             >
-            <div
-              :data-o="index % 2"
-              :style="{
-                backgroundColor: item.bgc
-              }"
-              :class="{'hidden': index % 2}">
+            <div class="work-list-title">
               <p
                 v-text="item.title"
               ></p>
             </div>
-
-          </a>
+          </router-link>
         </li>
       </transition-group>
     </section>
@@ -188,8 +181,8 @@ export default {
         study: true
       },
       work: {
-        github: true,
-        codepen: true
+        company: true,
+        self: true
       }
     }
   },
@@ -291,52 +284,22 @@ export default {
     work_list: function() {
       return [
         {
-          pic: require('@/assets/image/calculator.JPG'),
-          location: 'codepen',
-          filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/YLByzW',
-          bgc: 'purple',
-          title: 'calculator'
+          pic: '/static/images/xiaowei-company/cover.jpg',
+          filter: this.work.company,
+          path: '/portfolio/xiaowei-company',
+          title: '小为官网'
         },
         {
-          pic: require('@/assets/image/pomodoro clock.JPG'),
-          location: 'codepen',
-          filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/WJPyer',
-          bgc: 'green',
-          title: 'pomodoro clock'
+          pic: '/static/images/xiaowei-data-display-v4/cover.jpg',
+          filter: this.work.company,
+          path: '/portfolio/xiaowei-data-display',
+          title: '小为数据展示平台'
         },
         {
-          pic: require('@/assets/image/simon game.JPG'),
-          location: 'codepen',
-          filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/ELJEZO',
-          bgc: 'darkgreen',
-          title: 'simon game'
-        },
-        {
-          pic: require('@/assets/image/twitchtv JSON API.JPG'),
-          location: 'codepen',
-          filter: this.work.codepen,
-          href: 'https://codepen.io/tonyzhou1890/full/xjNgeo',
-          bgc: 'gray',
-          title: 'twitch.tv JSON API'
-        },
-        {
-          pic: require('@/assets/image/诗词.jpg'),
-          location: 'codepen',
-          filter: this.work.github,
-          href: 'https://github.com/tonyzhou1890/poem',
-          bgc: 'orange',
-          title: '诗词'
-        },
-        {
-          pic: require('@/assets/image/爱家.jpg'),
-          location: 'codepen',
-          filter: this.work.github,
-          href: 'https://github.com/tonyzhou1890/love-home',
-          bgc: 'lightblue',
-          title: '爱家'
+          pic: '/static/images/xiaowei-backend-v2/cover.jpg',
+          filter: this.work.company,
+          path: '/portfolio/xiaowei-backend',
+          title: '小为后台管理系统'
         }
       ]
     }
@@ -473,12 +436,17 @@ $white: white;
         float: left;
         overflow: hidden;
         position: relative;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+        box-sizing: border-box;
         img {
           width: 100%;
           height: 100%;
           vertical-align: middle;
         }
         div {
+          opacity: 0;
+          background: $white;
           position: absolute;
           top: 0;
           left: 0;
@@ -487,7 +455,7 @@ $white: white;
           text-align: center;
           padding: 0;
           margin: 0;
-          color: $white;
+          color: #333;
           font-size: 20px;
           font-weight: bold;
           transition: opacity .5s;
@@ -502,14 +470,8 @@ $white: white;
             height: 2rem;
           }
         }
-        .hidden {
-          opacity: 0;
-        }
-        &:hover div[data-o="0"]{
-          opacity: 0;
-        }
-        &:hover div[data-o="1"]{
-          opacity: 1;
+        &:hover div{
+          opacity: 0.6;
         }
       }
       .work-list-leave-to, .work-list-enter {
