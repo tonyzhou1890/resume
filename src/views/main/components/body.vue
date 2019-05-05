@@ -149,6 +149,7 @@
           v-show="item.filter"
         >
           <router-link
+            v-if="item.path"
             :to="item.path"
           >
             <img
@@ -160,6 +161,20 @@
               ></p>
             </div>
           </router-link>
+          <a
+            v-else
+            :href="item.href"
+            target="_blank"
+          >
+            <img
+              :src="item.pic"
+            >
+            <div class="work-list-title">
+              <p
+                v-text="item.title"
+              ></p>
+            </div>
+          </a>
         </li>
       </transition-group>
     </section>
@@ -300,6 +315,24 @@ export default {
           filter: this.work.company,
           path: '/portfolio/xiaowei-backend',
           title: '小为后台管理系统'
+        },
+        {
+          pic: '/static/images/poem-v3/cover.jpg',
+          filter: this.work.self,
+          path: '/portfolio/poem',
+          title: '诗词'
+        },
+        {
+          pic: '/static/images/tiny-utils.js/cover.png',
+          filter: this.work.self,
+          href: 'https://github.com/tonyzhou1890/tiny-utils.js',
+          title: 'tiny-utils.js'
+        },
+        {
+          pic: '/static/images/more/cover.png',
+          filter: true,
+          href: 'http://tony93.top/?page_id=204',
+          title: '更多……'
         }
       ]
     }
@@ -491,6 +524,18 @@ $white: white;
     font-size: 1.6rem;
     color: $lightBlue;
     margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .body {
+    .work {
+      .work-list {
+        li {
+          width: 50%;
+        }
+      }
+    }
   }
 }
 

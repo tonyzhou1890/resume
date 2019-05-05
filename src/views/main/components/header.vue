@@ -13,7 +13,7 @@
       <a href="tel:15705113851" target="_blank"><svg-icon icon-class="tel" class="svg" /></a>
       <a href="https://github.com/tonyzhou1890" target="_blank"><svg-icon icon-class="github" class="svg" /></a>
       <a href="https://codepen.io/tonyzhou1890" target="_blank"><svg-icon icon-class="codepen" class="svg" /></a>
-      <a :href="pdf" target="_blank"><svg-icon icon-class="print" class="svg" /></a>
+      <!-- <a :href="pdf" target="_blank"><svg-icon icon-class="print" class="svg" /></a> -->
     </div>
   </div>
 </template>
