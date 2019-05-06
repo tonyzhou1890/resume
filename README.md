@@ -1,4 +1,5 @@
-# resume
-前端简历（front-end resume）
+# 个人简历
 
-简历地址： [坚.top/apps/resume](http://坚.top/apps/resume)
+> 每个前端工程师都得有个不一样的简历——不同于智联、51Job这些网站的模板简历。
+
+地址：resume.tony93.top
