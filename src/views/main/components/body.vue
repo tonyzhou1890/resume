@@ -292,7 +292,7 @@ export default {
           time: '2018.8-2019.4',
           location: '小为智能科技有限公司',
           ex: '1. 官网的开发。<br />2. 数据展示平台的开发。<br />3. 后台管理系统的开发。',
-          filter: this.experence.study
+          filter: this.experence.work
         }
       ]
     },
