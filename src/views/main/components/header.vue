@@ -11,19 +11,23 @@
     <div class="contact">
       <p class="contact-item">
         <svg-icon icon-class="email" class="svg" />
+        <br />
         <span>1332988826@qq.com</span>
       </p>
       <p class="contact-item">
         <svg-icon icon-class="tel" class="svg" />
+        <br />
         <span>15705113851</span>
       </p>
       <p class="contact-item">
         <svg-icon icon-class="github" class="svg" />
-        <span>https://github.com/tonyzhou1890</span>
+        <br />
+        <span>github.com/tonyzhou1890</span>
       </p>
       <p class="contact-item">
         <svg-icon icon-class="codepen" class="svg" />
-        <span>https://codepen.io/tonyzhou1890</span>
+        <br />
+        <span>codepen.io/tonyzhou1890</span>
       </p>
     </div>
   </div>
@@ -73,9 +77,6 @@ $shadow: gray;
   }
   .contact {
     padding: 1rem;
-    .contact-item {
-      text-align-last: left;
-    }
   }
 }
 

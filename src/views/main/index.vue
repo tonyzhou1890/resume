@@ -85,14 +85,14 @@ $bgc: seashell;
   min-height: 100%;
   background-color: $bgc;
   > header {
-    width: 25%;
+    width: 30%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
   }
   .main {
-    width: 75%;
+    width: 70%;
     min-height: 100%;
     float: right;
     background-color: $bgc;
