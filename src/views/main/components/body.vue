@@ -370,6 +370,7 @@ $white: white;
   }
   .filter-list {
     float: right;
+    display: none;
     .filter {
       background-color: $lightBlue;
       padding: 5px;

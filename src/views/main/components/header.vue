@@ -9,11 +9,22 @@
       <p class="edu">盐城师范学院物理系</p>
     </div>
     <div class="contact">
-      <a href="mailto:1332988826@qq.com" target="_blank"><svg-icon icon-class="email" class="svg" /></a>
-      <a href="tel:15705113851" target="_blank"><svg-icon icon-class="tel" class="svg" /></a>
-      <a href="https://github.com/tonyzhou1890" target="_blank"><svg-icon icon-class="github" class="svg" /></a>
-      <a href="https://codepen.io/tonyzhou1890" target="_blank"><svg-icon icon-class="codepen" class="svg" /></a>
-      <!-- <a :href="pdf" target="_blank"><svg-icon icon-class="print" class="svg" /></a> -->
+      <p class="contact-item">
+        <svg-icon icon-class="email" class="svg" />
+        <span>1332988826@qq.com</span>
+      </p>
+      <p class="contact-item">
+        <svg-icon icon-class="tel" class="svg" />
+        <span>15705113851</span>
+      </p>
+      <p class="contact-item">
+        <svg-icon icon-class="github" class="svg" />
+        <span>https://github.com/tonyzhou1890</span>
+      </p>
+      <p class="contact-item">
+        <svg-icon icon-class="codepen" class="svg" />
+        <span>https://codepen.io/tonyzhou1890</span>
+      </p>
     </div>
   </div>
 </template>
@@ -61,18 +72,9 @@ $shadow: gray;
     }
   }
   .contact {
-    i, .svg {
-      display: inline-block;
-      width: 1.9rem;
-      height: 1.9rem;
-      line-height: 1.9rem;
-      font-size: 1.7rem;
-      cursor: pointer;
-      transition: transform .3s;
-      color: white;
-      &:hover {
-        transform: scale(1.6);
-      }
+    padding: 1rem;
+    .contact-item {
+      text-align-last: left;
     }
   }
 }
