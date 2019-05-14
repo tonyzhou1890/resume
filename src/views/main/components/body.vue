@@ -323,6 +323,12 @@ export default {
           title: '诗词'
         },
         {
+          pic: '/static/images/ele/cover.jpg',
+          filter: this.work.self,
+          path: '/portfolio/ele',
+          title: '饿了么(仿)'
+        },
+        {
           pic: '/static/images/tiny-utils.js/cover.png',
           filter: this.work.self,
           href: 'https://github.com/tonyzhou1890/tiny-utils.js',
