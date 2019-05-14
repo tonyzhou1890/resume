@@ -96,6 +96,26 @@ export default {
               text: `诗词详情页没有过多的内容，只有诗词内容本身。`
             }
           ]
+        },
+        ele: {
+          content: [
+            {
+              img: '/static/images/ele/首页.jpg',
+              text: `项目名称：饿了么(仿)\r\n技术栈：vue、vue-router、axios。\r\n项目说明：用vue开发的移动端项目，使用了flex弹性布局。实现了商品列表、评价、商家、优惠信息、商品详情等页面。`
+            },
+            {
+              img: '/static/images/ele/优惠信息.jpg'
+            },
+            {
+              img: '/static/images/ele/商品.jpg'
+            },
+            {
+              img: '/static/images/ele/评论.jpg'
+            },
+            {
+              img: '/static/images/ele/商家.jpg'
+            }
+          ]
         }
       }
     }
@@ -116,6 +136,9 @@ export default {
           break
         case 'poem':
           temp = this.portfolio.poemV3.content
+          break
+        case 'ele':
+          temp = this.portfolio.ele.content
           break
         default:
           break
