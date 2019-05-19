@@ -245,6 +245,11 @@ export default {
           filter: this.skill.lib
         },
         {
+          icon: '小程序',
+          text: '微信小程序',
+          filter: this.skill.lib
+        },
+        {
           icon: 'less',
           text: 'Less',
           filter: this.skill.tool
