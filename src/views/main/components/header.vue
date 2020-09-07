@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      pdf: require('@/assets/doc/resume.pdf'),
+      // pdf: require('@/assets/doc/resume.pdf'),
       photo: require('@/assets/image/pic2.jpg')
     }
   }

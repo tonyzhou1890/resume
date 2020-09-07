@@ -178,7 +178,7 @@
         </li>
       </transition-group>
     </section>
-    <p class="copyright">© 2019 Tony</p>
+    <p class="copyright">© {{ timeStr }} Tony</p>
   </div>
 </template>
 
@@ -202,6 +202,15 @@ export default {
     }
   },
   computed: {
+    timeStr: function() {
+      const start = 2019
+      const end = (new Date()).getFullYear()
+      if (end <= start) {
+        return start
+      } else {
+        return `${start} ~ ${end}`
+      }
+    },
     skill_list: function() {
       return [
         {
@@ -282,14 +291,14 @@ export default {
           title: '学生',
           time: '2012-2016',
           location: '盐城师范学院',
-          ex: '就读于盐城师范学院物理系。其间自学html、css、JavaScript。',
+          ex: '就读于盐城师范学院物理系。',
           filter: this.experence.study
         },
         {
-          title: '前端工程师',
+          title: '网站编辑',
           time: '2016.11-2018.7',
           location: '苏州志高装潢设计工程有限公司',
-          ex: '公司网站页面设计、开发及维护。',
+          ex: '1. 官网和公众号文章撰写。<br />2. 公司网站页面设计、开发及维护。',
           filter: this.experence.work
         },
         {
@@ -297,6 +306,13 @@ export default {
           time: '2018.8-2019.4',
           location: '小为智能科技有限公司',
           ex: '1. 官网的开发。<br />2. 数据展示平台的开发。<br />3. 后台管理系统的开发。',
+          filter: this.experence.work
+        },
+        {
+          title: '前端工程师',
+          time: '2019.5-2020.04',
+          location: '苏州市伏泰信息科技股份有限公司',
+          ex: '1. 全循环智能分类生态管理系统的开发维护。<br />2. 微信小程序《掌尚垃分》的开发维护。',
           filter: this.experence.work
         }
       ]
@@ -322,6 +338,24 @@ export default {
           title: '小为后台管理系统'
         },
         {
+          pic: '/static/images/vortex-backend/cover.jpg',
+          filter: this.work.company,
+          path: '/portfolio/vortex-backend',
+          title: '全循环智能分类生态管理系统'
+        },
+        {
+          pic: '/static/images/vortex-weapp/cover.jpg',
+          filter: this.work.company,
+          path: '/portfolio/vortex-weapp',
+          title: '掌尚垃分'
+        },
+        {
+          pic: '/static/images/reader2/cover.jpg',
+          filter: this.work.self,
+          path: '/portfolio/reader',
+          title: '享阅·阅读器'
+        },
+        {
           pic: '/static/images/poem-v3/cover.jpg',
           filter: this.work.self,
           path: '/portfolio/poem',
@@ -336,15 +370,15 @@ export default {
         {
           pic: '/static/images/tiny-utils.js/cover.png',
           filter: this.work.self,
-          href: 'https://github.com/tonyzhou1890/tiny-utils.js',
+          href: 'https://www.npmjs.com/package/tiny-utils.js',
           title: 'tiny-utils.js'
-        },
-        {
-          pic: '/static/images/more/cover.png',
-          filter: true,
-          href: 'http://tony93.top/?page_id=204',
-          title: '更多……'
         }
+        // {
+        //   pic: '/static/images/more/cover.png',
+        //   filter: true,
+        //   href: 'http://tony93.top/?page_id=204',
+        //   title: '更多……'
+        // }
       ]
     }
   }
@@ -550,7 +584,7 @@ $white: white;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 550px) {
   .body {
     .title {
       height: auto;

@@ -81,6 +81,58 @@ export default {
             }
           ]
         },
+        vortexBackend: {
+          content: [
+            {
+              img: '/static/images/vortex-backend/nav.jpg',
+              text: `项目名称：全循环智能分类生态管理系统\r\n技术栈：react、dva、echarts、bizcharts、zrender等。\r\n项目说明：这个项目是纳故环保后台管理系统。系统包括一般curd、报表、看板等类型页面。\r\n图片说明：这是导航页面。指向系统内部十几个子系统。`
+            },
+            {
+              img: '/static/images/vortex-backend/report.jpg',
+              text: `这是一个报表页面。主要用到的是 echarts 和 antd 的表格组件。`
+            },
+            {
+              img: '/static/images/vortex-backend/three-three-board.jpg',
+              text: `这是个动态旋转的看板页面。通过 zrender 绘制图形。图形的位置则根据当前帧计算，然后将计算的结果给 zrender。`
+            }
+          ]
+        },
+        vortexWeapp: {
+          content: [
+            {
+              img: '/static/images/vortex-weapp/home.jpg',
+              text: `项目名称：掌尚垃分\r\n技术栈：微信小程序。\r\n项目说明：这个小程序是垃圾分类的居民端。居民可以在这个小程序里查看垃圾分类的情况，以及通过投放垃圾获取的积分购买商品。`
+            },
+            {
+              img: '/static/images/vortex-weapp/answer.jpg',
+              text: `居民可以参加分类闯关活动答题抽奖以获取积分。`
+            },
+            {
+              img: '/static/images/vortex-weapp/dict.jpg',
+              text: `根据居民所在位置呈现不同城市的垃圾分类标准。按住搜索框右侧录音按钮可以语音搜索。这里用到了小程序语音插件——WechatSI`
+            },
+            {
+              img: '/static/images/vortex-weapp/mall.jpg',
+              text: `这里是积分商城，包含总公司的商品和当地项目公司的商品。居民可以在此购买商品。`
+            }
+          ]
+        },
+        reader: {
+          content: [
+            {
+              img: '/static/images/reader2/阅读页.jpg',
+              text: `项目名称：享阅·阅读器\r\n技术栈：vue、element-ui、canvas、Web Worker、postMessage、axios、localforage、clipboard。\r\n项目说明：这是个用 canvas 实现的 txt 阅读器。分页排版是根据 measureText 测量结果计算的。`
+            },
+            {
+              img: '/static/images/reader2/选择.jpg',
+              text: `因为排版都是计算出来的，根据事件位置计算页面哪个部分需要被选中当然是可以的。`
+            },
+            {
+              img: '/static/images/reader2/设置搜索目录.png',
+              text: `支持文本设置、搜索、自动分章。`
+            }
+          ]
+        },
         poemV3: {
           content: [
             {
@@ -134,6 +186,15 @@ export default {
         case 'xiaowei-data-display':
           temp = this.portfolio.xiaoweiDataDisplayV4.content
           break
+        case 'vortex-backend':
+          temp = this.portfolio.vortexBackend.content
+          break
+        case 'vortex-weapp':
+          temp = this.portfolio.vortexWeapp.content
+          break
+        case 'reader':
+          temp = this.portfolio.reader.content
+          break
         case 'poem':
           temp = this.portfolio.poemV3.content
           break
@@ -152,6 +213,7 @@ export default {
 <style lang="scss" scoped>
 .portfolio-container {
   width: 100%;
+  margin: 0 auto;
   min-height: 100%;
   background: seashell;
 }
