@@ -310,8 +310,8 @@ export default {
         },
         {
           title: '前端工程师',
-          time: '2019.5-2020.04',
-          location: '苏州市伏泰信息科技股份有限公司',
+          time: '2019.5-2020.4 / 2020.5-至今',
+          location: '苏州环境云信息科技有限公司 / 苏州纳故环保有限公司',
           ex: '1. 全循环智能分类生态管理系统的开发维护。<br />2. 微信小程序《掌尚垃分》的开发维护。',
           filter: this.experence.work
         }
@@ -320,77 +320,77 @@ export default {
     work_list: function() {
       return [
         {
-          pic: '/static/images/xiaowei-company/cover.jpg',
+          pic: '/img/xiaowei-company/cover.jpg',
           filter: this.work.company,
           path: '/portfolio/xiaowei-company',
           title: '小为官网'
         },
         {
-          pic: '/static/images/xiaowei-data-display-v4/cover.jpg',
+          pic: '/img/xiaowei-data-display-v4/cover.jpg',
           filter: this.work.company,
           path: '/portfolio/xiaowei-data-display',
           title: '小为数据展示平台'
         },
         {
-          pic: '/static/images/xiaowei-backend-v2/cover.jpg',
+          pic: '/img/xiaowei-backend-v2/cover.jpg',
           filter: this.work.company,
           path: '/portfolio/xiaowei-backend',
           title: '小为后台管理系统'
         },
         {
-          pic: '/static/images/vortex-backend/cover.jpg',
+          pic: '/img/vortex-backend/cover.jpg',
           filter: this.work.company,
           path: '/portfolio/vortex-backend',
           title: '全循环智能分类生态管理系统'
         },
         {
-          pic: '/static/images/vortex-weapp/cover.jpg',
+          pic: '/img/vortex-weapp/cover.jpg',
           filter: this.work.company,
           path: '/portfolio/vortex-weapp',
           title: '掌尚垃分'
         },
         {
-          pic: '/static/images/reader2/cover.jpg',
+          pic: '/img/reader2/cover.jpg',
           filter: this.work.self,
           path: '/portfolio/reader',
           title: '享阅·阅读器'
         },
         {
-          pic: '/static/images/poem-v3/cover.jpg',
+          pic: '/img/poem-v3/cover.jpg',
           filter: this.work.self,
           path: '/portfolio/poem',
           title: '诗词'
         },
         {
-          pic: '/static/images/ele/cover.jpg',
+          pic: '/img/ele/cover.jpg',
           filter: this.work.self,
           path: '/portfolio/ele',
           title: '饿了么(仿)'
         },
         {
-          pic: '/static/images/tiny-utils.js/cover.png',
+          pic: '/img/tiny-utils.js/cover.png',
           filter: this.work.self,
           href: 'https://www.npmjs.com/package/tiny-utils.js',
           title: 'tiny-utils.js'
+        },
+        {
+          pic: '/img/more/cover.png',
+          filter: true,
+          href: 'https://lab.tony93.top',
+          title: '更多……'
         }
-        // {
-        //   pic: '/static/images/more/cover.png',
-        //   filter: true,
-        //   href: 'http://tony93.top/?page_id=204',
-        //   title: '更多……'
-        // }
       ]
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-$bgc: seashell;
-$blue: rgb(84, 110, 226);
-$lightBlue: rgb(119, 139, 233);
-$lightGray: lightgray;
-$white: white;
+<style lang="less" scoped>
+@bgc: seashell;
+@blue: rgb(84, 110, 226);
+@lightBlue: rgb(119, 139, 233);
+@lightGray: lightgray;
+@white: white;
 .body {
   width: 100%;
   min-height: 100%;
@@ -405,7 +405,7 @@ $white: white;
   h2 {
     font-size: 1.6rem;
     line-height: 2rem;
-    color: $lightBlue;
+    color: @lightBlue;
     width: auto;
     display: inline-block;
     i, svg {
@@ -416,29 +416,29 @@ $white: white;
   .filter-list {
     float: right;
     .filter {
-      background-color: $lightBlue;
+      background-color: @lightBlue;
       padding: 5px;
       cursor: pointer;
       margin-right: 5px;
-      color: $white;
+      color: @white;
       transition: all .3s;
       position: relative;
       user-select: none;
       i, .svg {
         font-size: 1rem;
-        color: $lightBlue;
-        background-color: $white;
+        color: @lightBlue;
+        background-color: @white;
       }
       &:hover {
-        background-color: $blue;
+        background-color: @blue;
       }
       > input[type='checkbox'] {
         display: none;
       }
       &.no-active {
-        background-color: $lightGray;
+        background-color: @lightGray;
         i, .svg {
-          color: $white;
+          color: @white;
         }
       }
     }
@@ -485,6 +485,9 @@ $white: white;
         line-height: 1.6rem;
         margin: 16px 0 0 0;
       }
+      .ex-ex {
+        line-height: 1.6;
+      }
       hr {
         margin: 4px 0;
       }
@@ -492,7 +495,7 @@ $white: white;
         margin: 0 0 16px 0;
         font-size: 1rem;
         font-weight: bold;
-        color: $lightBlue;
+        color: @lightBlue;
       }
       .experence-list-leave-to, .experence-list-enter {
         opacity: 0;
@@ -524,7 +527,7 @@ $white: white;
         }
         div {
           opacity: 0;
-          background: $white;
+          background: @white;
           position: absolute;
           top: 0;
           left: 0;
@@ -567,7 +570,7 @@ $white: white;
   .copyright {
     text-align: center;
     font-size: 1.6rem;
-    color: $lightBlue;
+    color: @lightBlue;
     margin-top: 1.5rem;
   }
 }
@@ -597,6 +600,13 @@ $white: white;
         .filter {
           display: inline-block;
           margin: 5px 5px 5px 0;
+        }
+      }
+    }
+    .skill {
+      .skill-list {
+        li {
+          width: 50%;
         }
       }
     }

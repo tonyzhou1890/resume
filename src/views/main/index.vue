@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .resume {
   position: relative;
   overflow-x: hidden;
@@ -78,12 +78,12 @@ export default {
 }
 </style>
 
-<style lang="scss" scoped>
-$bgc: seashell;
+<style lang="less" scoped>
+@bgc: seashell;
 .resume {
   width: 100%;
   min-height: 100%;
-  background-color: $bgc;
+  background-color: @bgc;
   > header {
     width: 25%;
     height: 100%;
@@ -95,9 +95,8 @@ $bgc: seashell;
     width: 75%;
     min-height: 100%;
     float: right;
-    background-color: $bgc;
+    background-color: @bgc;
   }
-
 }
 
 @media screen and (max-width: 900px) {

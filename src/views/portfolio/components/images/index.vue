@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .images-container {
   margin: 0 auto;
   padding-bottom: 1rem;
