@@ -274,6 +274,11 @@ export default {
           filter: this.skill.tool
         },
         {
+          icon: 'nodejs',
+          text: 'node.js',
+          filter: this.skill.lang
+        },
+        {
           icon: 'github',
           text: 'git',
           filter: this.skill.tool
@@ -310,9 +315,9 @@ export default {
         },
         {
           title: '前端工程师',
-          time: '2019.5-2020.4 / 2020.5-至今',
-          location: '苏州环境云信息科技有限公司 / 苏州纳故环保有限公司',
-          ex: '1. 全循环智能分类生态管理系统的开发维护。<br />2. 微信小程序《掌尚垃分》的开发维护。',
+          time: '2019.5-2021.9',
+          location: '苏州纳故环保有限公司',
+          ex: '1. 全循环智能分类生态管理系统的开发维护。<br />2. 微信小程序《掌尚垃分》的开发维护。<br />3. 工作人员小程序《纳故垃份工作》的开发和维护。',
           filter: this.experence.work
         }
       ]
@@ -361,12 +366,12 @@ export default {
           path: '/portfolio/poem',
           title: '诗词'
         },
-        {
-          pic: '/img/ele/cover.jpg',
-          filter: this.work.self,
-          path: '/portfolio/ele',
-          title: '饿了么(仿)'
-        },
+        // {
+        //   pic: '/img/ele/cover.jpg',
+        //   filter: this.work.self,
+        //   path: '/portfolio/ele',
+        //   title: '饿了么(仿)'
+        // },
         {
           pic: '/img/tiny-utils.js/cover.png',
           filter: this.work.self,
